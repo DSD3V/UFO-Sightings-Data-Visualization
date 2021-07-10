@@ -1,6 +1,6 @@
 # UFO-Sightings-Data-Visualization
 
-[View the data visualization here.](https://dsd3v.github.io/UFO-Sightings-Data-Visualization/){:target="_blank"}
+<a href="https://dsd3v.github.io/UFO-Sightings-Data-Visualization/" target="_blank">View the data visualization here.</a>
 
 This narrative visualization displays key data gathered from over 90,000 UFO Sightings since 1969 using JavaScript and the d3.js library.
 
