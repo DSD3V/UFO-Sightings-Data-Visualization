@@ -2,7 +2,7 @@
 
 #### View the data visualization here: https://dsd3v.github.io/UFO-Sightings-Data-Visualization/
 
-
+<br />
 This narrative visualization displays key data gathered from over 90,000 UFO Sightings since 1969 using JavaScript and the d3.js library.
 
 Following a Martini Glass structure, the first three charts are displayed without any option for user interaction, while the table at the end
