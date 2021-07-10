@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>UFO Sightings Data Visualization</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="nav-item" href="#top">Overview</a>
+        <span id="divider">|</span>
+        <a class="nav-item" href="#sightingsOverTimeAnchor">Sightings Over Time</a>
+        <span id="divider">|</span>
+        <a class="nav-item" href="#sightingsByLocationAnchor">Sightings By Location</a>
+        <span id="divider">|</span>
+        <a class="nav-item" href="#figuresReportedAnchor">Figures Reported</a>
+        <span id="divider">|</span>
+        <a class="nav-item" href="#filterSightingsAnchor">Filter Sightings and View Details</a>
+    </nav>
+
+    <h1 id="top">UFO Sightings Narrative Data Visualization</h1>
+
+    <div id="info">
+        <p>Welcome to the UFO Sightings Narrative Data Visualization.</p>
+
+        <p>This narrative visualization displays key data gathered from over 98,000 UFO Sightings since 1969 using Javascript and the d3.js library.</p>
+
+        <p>Following a Martini Glass structure, the first three charts are displayed without any option for user interaction, while the table at the end
+        can be filtered by the user to search for specific UFO sightings based on the year, region, and figure reported.</p>
+
+        <p>The message behind this narrative visualization is to encourage the viewer to consider the possibility of alien life in the universe,
+        due to the sheer number and apparent patterns and similarities between UFO sightings.</p>
+        <a class="link" href="https://data.world/timothyrenner/ufo-sightings" target="_blank" rel="noopener noreferrer">Access Public Dataset Here.</a>
+    </div>
+
+    <hr />
+
+    <div id="loading">
+        Loading UFO Sightings Data...
+    </div>
+
+    <section id="wrapper">
+        <div id="sightingsOverTimeAnchor" class="content" data-aos="fade-in" data-aos-mirror="true" data-aos-duration="350">
+            <h2>Sightings Over Time</h2>
+            <svg id="sightingsOverTime"></svg>
+        </div>
+
+        <hr />
+
+        <div id="sightingsByLocationAnchor" class="content" data-aos="fade-in" data-aos-mirror="true" data-aos-duration="350">
+            <h2>Sightings By Location</h2>
+            <span id="loadingMap">Loading Map...</span>
+            <svg id="sightingsByLocation"></svg>
+        </div>
+
+        <hr />
+        
+        <div id="figuresReportedAnchor" class="content" data-aos="fade-in" data-aos-mirror="true" data-aos-duration="350">
+            <h2>Figures Reported</h2>
+            <svg id="figuresReported"></svg>
+        </div>
+
+        <hr />
+        
+        <div id="filterSightingsAnchor" class="content" data-aos="fade-in" data-aos-mirror="true" data-aos-duration="350">
+            <h2>Filter Sightings and View Details</h2>
+
+            <div id="filterWrapper">
+                <table id="sightingsTable">
+                    <tdhead>
+                        <tr>
+                            <th>Year</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Figure</th>
+                            <th>Description</th>
+                            <th>Link</th>
+                        </tr>
+                    </tdhead>
+                    <tbody id="tableRows"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <div id="pagesDiv"></div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+    
+                <div id="paramsDiv">
+                    <h3>Filter Sightings By:</h3>
+
+                    <div class="paramHeading">
+                        <input type="checkbox" class="optionLabel" id="yearLabel" name="yearLabel" value="yearLabel" checked="true" />
+                        <label for="yearLabel">Year:</label>
+                    </div>
+                    <br />
+                    <div id="yearOptions" class="optionsDiv"></div>
+    
+                    <div class="paramHeading">
+                        <input type="checkbox" class="optionLabel" id="regionLabel" name="regionLabel" value="regionLabel" checked="true" />
+                        <label for="regionLabel">Region:</label>
+                    </div>
+                    <br />
+                    <div id="regionOptions" class="optionsDiv"></div>
+
+                    <div class="paramHeading">
+                        <input type="checkbox" class="optionLabel" id="figureLabel" name="figureLabel" value="figureLabel" checked="true" />
+                        <label for="figureLabel">Figure Reported:</label>
+                    </div>
+                    <br />
+                    <div id="figureOptions" class="optionsDiv"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script type="module" src="UFOsViz.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init()</script>
+</html>
