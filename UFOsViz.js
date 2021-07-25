@@ -509,7 +509,7 @@ function renderPagination(currPage, numPages, tableState) {
         if (inputPage > 0 && inputPage <= numPages) {
             updatePage(goBtn, document.getElementById('pageInput').value, tableState)
         } else {
-            alert(`Invalid page entered, please enter a page between 1 and ${numPages}`)
+            alert(`Invalid page entered, please enter a page between 1 and ${numPages}.`)
         }
     }
 }
