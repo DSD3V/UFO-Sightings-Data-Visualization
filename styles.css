@@ -47,12 +47,18 @@ html {
 h1 {
     color: white;
     margin-top: 5%;
+    margin-bottom: -1%;
 }
 
 h2 {
     color: white;
     text-align: center;
     margin-bottom: 2%;
+}
+
+#img {
+    width: 300px;
+    height: 200px;
 }
 
 #loading {
